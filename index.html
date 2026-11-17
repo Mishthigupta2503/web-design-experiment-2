@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,91 +8,121 @@
     <title>My Personal Portfolio</title>
 
     <style>
-        * {
+        * * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7fb;
-            color: #222;
-            line-height: 1.6;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F5EBDD;
+            color: #76545B;
+            line-height: 1.7;
+        }
+
+        /* Header */
         header {
-            background-color: #243b55;
-            color: white;
+            background: linear-gradient(135deg, #E8B9C4, #F5EBDD);
+            color: #76545B;
             text-align: center;
-            padding: 40px 20px;
+            padding: 85px 20px;
         }
 
         header h1 {
-            margin-bottom: 10px;
+            font-family: Georgia, serif;
+            font-size: 48px;
+            margin-bottom: 12px;
         }
 
+        header p {
+            font-size: 17px;
+        }
+
+        /* Navigation */
         nav {
-            background-color: #141e30;
+            background-color: #76545B;
             text-align: center;
-            padding: 15px;
+            padding: 17px;
             position: sticky;
             top: 0;
+            z-index: 10;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 18px;
+            font-size: 14px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #E8B9C4;
         }
 
+        /* Main Sections */
         section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 40px;
+            background-color: #FFF9F5;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(118, 84, 91, 0.08);
         }
 
         h2 {
-            color: #243b55;
-            margin-bottom: 15px;
+            font-family: Georgia, serif;
+            color: #A8667B;
+            font-size: 30px;
+            margin-bottom: 20px;
         }
 
+        /* Projects */
         .projects {
             display: flex;
-            gap: 20px;
+            gap: 22px;
             flex-wrap: wrap;
         }
 
         .project-card {
             flex: 1;
             min-width: 220px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            padding: 25px;
+            background-color: #F9E9E9;
+            border: 1px solid #E8C8CF;
+            border-radius: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
         }
 
         .project-card h3 {
-            margin-bottom: 10px;
-            color: #243b55;
+            font-family: Georgia, serif;
+            color: #A8667B;
+            margin-bottom: 12px;
         }
 
+        /* Contact Form */
         form {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
-        input, textarea {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        input,
+        textarea {
+            padding: 14px;
+            border: 1px solid #E8C8CF;
+            border-radius: 9px;
+            background-color: #FFFDFC;
             font-size: 15px;
+            font-family: Arial, sans-serif;
         }
 
         textarea {
@@ -100,24 +131,88 @@
         }
 
         button {
-            padding: 12px;
-            background-color: #243b55;
+            padding: 13px;
+            background-color: #A8667B;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 9px;
             cursor: pointer;
+            font-size: 15px;
         }
 
         button:hover {
-            background-color: #141e30;
+            background-color: #76545B;
         }
 
+        /* Footer */
         footer {
-            background-color: #243b55;
+            background-color: #76545B;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 28px;
+            margin-top: 45px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            section {
+                margin: 20px 15px;
+                padding: 25px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 60px 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        /* Cute decorative details */
+        header {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cat-sticker {
+            position: absolute;
+            right: 8%;
+            bottom: 15px;
+            font-size: 55px;
+            transform: rotate(-10deg);
+        }
+
+        h2::after {
+            content: " ✦";
+            color: #E8B9C4;
+        }
+
+        footer p::after {
+            content: " ♡";
+            color: #E8B9C4;
+        }
+
+        @media (max-width: 480px) {
+            .cat-sticker {
+                font-size: 38px;
+                right: 5%;
+            }
         }
     </style>
 </head>
@@ -127,6 +222,9 @@
     <header>
         <h1>Mishthi Gupta</h1>
         <p>Student | Web Designing Enthusiast</p>
+        <div class="cat-sticker">
+            🐈
+        </div>
     </header>
 
     <nav>
@@ -195,4 +293,5 @@
     </footer>
 
 </body>
+
 </html>
